@@ -142,16 +142,10 @@ function processDuplicateFree(list, cb) {
   // there is a list that is an array
   // each item in the array is an element
   // the parameter list is the array
-  //the parameter cb is the function
-// for (let i = 0; i < list.length; i++) {
-//   const outerItem = list[i];
-//   for (let e = 1; e < list.length; e++) {
-//     const innerItem = list[e];
-//     if (outerItem === innerItem) {
-
-//     }
-//   } //inner loop
-// } //outer loop
+  // the parameter cb is the function
+  return cb(list.filter((item, index) => {
+    return list.indexOf(item) === index;
+  }))
 }
 
 
